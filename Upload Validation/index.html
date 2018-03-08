@@ -1,0 +1,119 @@
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+<div class="wrapper center-block">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading active" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Upload Documentos Pessoais
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <form action="" method="POST"  enctype="multipart/form-data"
+                onsubmit="validatePessoais(); return false;">		       	
+            Documento de identidade:
+            <input type="file" name="rg" multiple="multiple" id="uploadPessoais1" onblur="escondeMsg('div_msgPessoais1')"/>
+            <div id="div_msgPessoais1"></div>
+            <br><br>
+            Comprovante de residência:
+            <input type='file' name="compRes"  multiple="multiple" id="uploadPessoais2" onblur="escondeMsg('div_msgPessoais2')"/>
+            <div id="div_msgPessoais2"></div>
+            <br><br>
+            CPF:
+            <input type="file" name="cpf"  multiple="multiple" id="uploadPessoais3" onblur="escondeMsg('div_msgPessoais3')">
+            <div id="div_msgPessoais3"></div>
+            <br><br>
+            <input type="submit" value="ENVIAR DOCUMENTOS" />
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Upload Holerite
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+          <form action="" method="POST"  enctype="multipart/form-data"
+                onsubmit="validateHolerite(); return false;">		       	
+                Holerite 1º Mês:
+            <input type="file" name="holerite1Mes" multiple="multiple" id="uploadHolerite1" onblur="escondeMsg('div_msgHolerite1')"/>
+            <div id="div_msgHolerite1"></div>
+            <br><br>
+            Holerite 2º Mês:
+            <input type='file' name="holerite2Mes"  multiple="multiple" id="uploadHolerite2" onblur="escondeMsg('div_msgHolerite2')"/>
+            <div id="div_msgHolerite2"></div>
+            <br><br>
+            Holerite 3º Mês:
+            <input type="file" name="holerite3Mes"  multiple="multiple" id="uploadHolerite3" onblur="escondeMsg('div_msgHolerite3')">
+            <div id="div_msgHolerite3"></div>
+            <br><br>
+            <input type="submit" value="ENVIAR DOCUMENTOS" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Upload Documentos Contratuais
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <form action="" method="POST"  enctype="multipart/form-data"
+                  onsubmit="validateContratuais(); return false;">		       	
+              <p>Enviar contrato por página:</p>
+              Contrato - Capa:
+              <input type="file" name="contratoPg1" multiple="multiple" id="uploadContratuais1" onblur="escondeMsg('div_msgContratuais1')"/>
+              <div id="div_msgContratuais1"></div>
+              <br><br>
+              Contrato - Emitente:
+              <input type="file" name="contratoPg2" multiple="multiple" id="uploadContratuais2" onblur="escondeMsg('div_msgContratuais2')"/>
+              <div id="div_msgContratuais2"></div>
+              <br><br>
+              Contrato - CET:
+              <input type="file" name="contratoPg3" multiple="multiple" id="uploadContratuais3" onblur="escondeMsg('div_msgContratuais3')"/>
+              <div id="div_msgContratuais3"></div>
+              <br><br>
+              Contrato - PEP:
+              <input type="file" name="contratoPg4" multiple="multiple" id="uploadContratuais4" onblur="escondeMsg('div_msgContratuais4')"/>
+              <div id="div_msgContratuais4"></div>
+              <br><br>
+              Contrato - Declaração de residêcircncia: 
+              <input type="file" name="contratoPg5" multiple="multiple" id="uploadContratuais5" onblur="escondeMsg('div_msgContratuais5')"/>
+              <div id="div_msgContratuais5"></div>
+              <br><br>
+              Contrato - Outros:
+              <input type="file" name="contratoPg6" multiple="multiple" id="uploadContratuais6" onblur="escondeMsg('div_msgContratuais6')"/>
+              <div id="div_msgContratuais6"></div>
+              <br><br>		       			       	
+              Contrato - Outros:
+              <input type="file" name="contratoPg7" multiple="multiple" id="uploadContratuais7" onblur="escondeMsg('div_msgContratuais7')"/>
+              <div id="div_msgContratuais7"></div>
+              <br><br>
+              <input type="submit" value="ENVIAR DOCUMENTOS"/> 
+          </form>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>   
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="func.js"></script>
