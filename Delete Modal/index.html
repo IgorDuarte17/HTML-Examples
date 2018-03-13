@@ -1,0 +1,34 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Modal Delete -->
+<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Excluir Registro</h4>
+            </div>
+            <div class="modal-body">
+                Deseja realmente excluir este registro?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="btnDeleteModal" value="">Sim</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Delete -->
+
+
+<!-- Botão Delete -->
+ <div id="actions" class="row">
+    <div class="col-md-12">
+        <a href="#" data-href="#" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
