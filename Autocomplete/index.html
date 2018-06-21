@@ -1,0 +1,27 @@
+<div class="input-group input-group-lg">
+    <span class="input-group-addon">Campo de Texto</span>
+    <br>
+    <textarea id="textarea" style="width: 600px; height: 75px; resize: none;">
+    </textarea>
+</div> 
+<br><br>
+<div class="input-group input-group-lg" >
+    <label>Opções para Autocompletar</label>
+    <br>
+    <select id="select" class="form-control plan" style="width: 600px; resize: none;" onchange();>
+        <option></option>
+        <option value="Texto 1">Texto 1</option>
+        <option value="Texto 2">Texto 2</option>
+        <option value="Texto 3">Texto 3</option>
+    </select>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Realiza autocomplete do select para o textarea -->
+<script type="text/javascript">  
+    $('#select').on('change', function() {
+        var select = $(this).val();
+        $('#textarea').val(select);
+    });
+</script>
